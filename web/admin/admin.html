@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-panel">
+        <h1>Panel de Administración</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#proveedores">Proveedores</a></li>
+                <li><a href="#usuarios">Usuarios</a></li>
+            </ul>
+        </nav>
+
+        <!-- Productos -->
+        <section id="productos">
+            <h2>Gestión de Productos</h2>
+            <button onclick="mostrarFormularioProducto()">Agregar Producto</button>
+            <div id="producto-form" style="display:none;">
+                <h3>Formulario de Producto</h3>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" name="descripcion" required>
+                <label for="precio_venta">Precio de Venta:</label>
+                <input type="number" id="precio_venta" name="precio_venta" required>
+                <button onclick="guardarProducto()">Guardar Producto</button>
+                <button onclick="ocultarFormularioProducto()">Cancelar</button>
+            </div>
+            <div id="lista-productos">
+                <!-- Los productos se cargarán aquí desde JS -->
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <section id="categorias">
+            <h2>Gestión de Categorías</h2>
+            <button onclick="mostrarFormularioCategoria()">Agregar Categoría</button>
+            <div id="categoria-form" style="display:none;">
+                <h3>Formulario de Categoría</h3>
+                <label for="categoria-nombre">Nombre de la Categoría:</label>
+                <input type="text" id="categoria-nombre" required>
+                <button onclick="guardarCategoria()">Guardar Categoría</button>
+                <button onclick="ocultarFormularioCategoria()">Cancelar</button>
+            </div>
+            <div id="lista-categorias">
+                <!-- Las categorías se cargarán aquí desde JS -->
+            </div>
+        </section>
+
+        <!-- Proveedores -->
+        <section id="proveedores">
+            <h2>Gestión de Proveedores</h2>
+            <button onclick="mostrarFormularioProveedor()">Agregar Proveedor</button>
+            <div id="proveedor-form" style="display:none;">
+                <h3>Formulario de Proveedor</h3>
+                <label for="proveedor-nombre">Nombre del Proveedor:</label>
+                <input type="text" id="proveedor-nombre" required>
+                <button onclick="guardarProveedor()">Guardar Proveedor</button>
+                <button onclick="ocultarFormularioProveedor()">Cancelar</button>
+            </div>
+            <div id="lista-proveedores">
+                <!-- Los proveedores se cargarán aquí desde JS -->
+            </div>
+        </section>
+
+        <!-- Usuarios -->
+        <section id="usuarios">
+            <h2>Gestión de Usuarios</h2>
+            <button onclick="mostrarFormularioUsuario()">Agregar Usuario</button>
+            <div id="usuario-form" style="display:none;">
+                <h3>Formulario de Usuario</h3>
+                <label for="usuario-nombre">Nombre del Usuario:</label>
+                <input type="text" id="usuario-nombre" required>
+                <label for="usuario-email">Email:</label>
+                <input type="email" id="usuario-email" required>
+                <button onclick="guardarUsuario()">Guardar Usuario</button>
+                <button onclick="ocultarFormularioUsuario()">Cancelar</button>
+            </div>
+            <div id="lista-usuarios">
+                <!-- Los usuarios se cargarán aquí desde JS -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
